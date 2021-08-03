@@ -14,7 +14,7 @@ export class MoviesService {
     return this.http
       .get('http://www.omdbapi.com', {
         params: {
-          apikey: "f79aeba3",
+          apikey: "525cae7e",
           s: path
         }
       })
