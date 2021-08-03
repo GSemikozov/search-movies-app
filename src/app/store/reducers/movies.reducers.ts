@@ -1,4 +1,4 @@
-import {Action, createReducer, on} from '@ngrx/store';
+import { Action, createReducer, on } from '@ngrx/store';
 import { MoviesModel } from '../models/movies.model';
 import { loadMoviesSuccess, loadMoviesFailure, searchMovies } from '../actions/movies.actions';
 
@@ -9,6 +9,7 @@ const _moviesReducer = createReducer(
   moviesInitialState,
   on(
     loadMoviesSuccess, (state, { data }) => {
+      console.log("reducer data", data)
       return [...data];
     }),
   on(loadMoviesFailure, (state, { error }) => {
