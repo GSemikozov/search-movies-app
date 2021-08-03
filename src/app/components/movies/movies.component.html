@@ -1,0 +1,15 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Movies</h1>
+  <app-search-form></app-search-form>
+  <mat-grid-list [cols]="breakpoint" (window:resize)="onResize($event)">
+    <mat-grid-tile *ngFor="let movie of movies$ | async">
+      <app-card
+        [title]="movie['Title']"
+        [year]="movie['Year']"
+        [type]="movie['Type']"
+        [poster]="movie['Poster']"
+        [id]="movie['imdbID']"
+      ></app-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

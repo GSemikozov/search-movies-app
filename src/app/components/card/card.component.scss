@@ -1,0 +1,27 @@
+@import '~@angular/material/theming';
+
+.dashboard-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  &:hover {
+    @include mat-elevation(8);
+  }
+}
+
+.mat-card-content {
+  padding: 15px;
+  max-height: calc(100% - 52px - 30px);
+  overflow: hidden;
+}
+
+.mat-card-image {
+  max-width: 100%;
+  width: auto;
+  display: flex;
+  margin: 0 auto 15px;
+}

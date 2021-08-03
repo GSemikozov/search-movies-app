@@ -1,0 +1,14 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Movie Details</h1>
+  <div *ngIf="movie$ | async as movie">
+    <h3 class="mat-h3">
+      <strong>{{ movie.Title }}</strong>
+      <mat-chip-list class="mat-chip-list">
+        <mat-chip color="primary" selected disabled>{{ movie.Type }}</mat-chip>
+      </mat-chip-list>
+    </h3>
+    <p class="demo-2">({{ movie.Year }})</p>
+    <img [src]="movie.Poster" alt="{{ movie.Title }}" style="display: block; margin: 0 0 40px; max-width: 100%">
+  </div>
+  <button mat-raised-button color="secondary" (click)="gotoMoviesBack()">Back</button>
+</div>

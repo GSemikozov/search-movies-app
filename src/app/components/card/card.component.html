@@ -1,0 +1,14 @@
+<mat-card matRipple class="dashboard-card" tabindex="0" [routerLink]="['/movies', id]">
+  <mat-card-header>
+    <mat-card-title>
+      {{title}}
+    </mat-card-title>
+    <mat-card-subtitle>
+      {{type}} - {{year}}
+    </mat-card-subtitle>
+    <mat-card-subtitle></mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <img mat-card-image [src]="poster">
+  </mat-card-content>
+</mat-card>
