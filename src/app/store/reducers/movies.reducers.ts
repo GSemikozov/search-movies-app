@@ -9,7 +9,6 @@ const _moviesReducer = createReducer(
   moviesInitialState,
   on(
     loadMoviesSuccess, (state, { data }) => {
-      console.log("reducer data", data)
       return [...data];
     }),
   on(loadMoviesFailure, (state, { error }) => {
