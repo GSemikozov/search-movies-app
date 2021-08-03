@@ -1,6 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { MoviesModel } from "../models/movies.model";
-import {ResponseModel} from "../models/response.model";
+import {ResponseModel} from '../models/response.model';
 
 export enum MoviesActionsEnum {
   loadMovies = '[Movies API] Load Movies',
