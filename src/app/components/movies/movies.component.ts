@@ -25,7 +25,6 @@ export class MoviesComponent implements OnInit {
 
   ngOnInit(): void {
     this.breakpoint = (window.innerWidth <= 800) ? 1 : (window.innerWidth > 1400) ? 3 : 2;
-    this.movies$.pipe(map(value => value));
     this.movies$.subscribe((movies) => {
       if (!(movies.length > 0)) {
         this.queryParam$.subscribe((searchParam) => { // TODO: anti-pattern, rewrite it
