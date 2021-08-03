@@ -74,7 +74,8 @@ import {HttpRequestInterceptor} from './interceptor/http-request-interceptor';
   providers: [
     MoviesService,
     MoviesSearchParamService,
-    { provide: HTTP_INTERCEPTORS,
+    {
+      provide: HTTP_INTERCEPTORS,
       useClass: HttpRequestInterceptor,
       multi: true
     }

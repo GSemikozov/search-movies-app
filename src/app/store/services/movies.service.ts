@@ -18,8 +18,7 @@ export class MoviesService {
           s: path
         }
       })
-      // @ts-ignore
-      .pipe(map((movies) => movies.Search || []))
+      .pipe(map((movies: any) => movies))
       .pipe(catchError((error: any) => throwError(error.message)));
   }
 }

@@ -1,7 +1,7 @@
 export interface MoviesModel {
-  "Title": string;
-  "Year": string;
-  "imdbID": string;
-  "Type": string;
-  "Poster": string;
+  Title: string;
+  Year: string;
+  imdbID: string;
+  Type: string;
+  Poster: string;
 }

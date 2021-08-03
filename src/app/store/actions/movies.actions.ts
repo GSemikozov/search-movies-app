@@ -1,5 +1,6 @@
 import { createAction, props } from '@ngrx/store';
 import { MoviesModel } from "../models/movies.model";
+import {ResponseModel} from "../models/response.model";
 
 export enum MoviesActionsEnum {
   loadMovies = '[Movies API] Load Movies',
@@ -14,7 +15,7 @@ export const loadMovies = createAction(
 
 export const loadMoviesSuccess = createAction(
   MoviesActionsEnum.loadMoviesSuccess,
-  props<{ data: MoviesModel[]; }>()
+  props<{ data: ResponseModel; }>()
 );
 
 export const loadMoviesFailure = createAction(

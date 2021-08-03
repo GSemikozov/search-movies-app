@@ -9,7 +9,8 @@ const _moviesReducer = createReducer(
   moviesInitialState,
   on(
     loadMoviesSuccess, (state, { data }) => {
-      return [...data];
+      const { Search, Response } = data;
+      return Response !== "False" ? [...Search] : state;
     }),
   on(loadMoviesFailure, (state, { error }) => {
     return error;
