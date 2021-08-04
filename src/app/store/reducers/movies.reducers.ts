@@ -7,11 +7,10 @@ export const moviesSearchParamInitialState: string = 'People';
 
 const _moviesReducer = createReducer(
   moviesInitialState,
-  on(
-    loadMoviesSuccess, (state, { data }) => {
-      const { Search, Response } = data;
-      return Response !== "False" ? [...Search] : state;
-    }),
+  on(loadMoviesSuccess, (state, { data }) => {
+    const { Search, Response } = data;
+    return Response !== "False" ? [...Search] : state;
+  }),
   on(loadMoviesFailure, (state, { error }) => {
     return error;
   })

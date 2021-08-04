@@ -1,4 +1,4 @@
-import { MoviesModel } from "./movies.model";
+import { MoviesModel } from './movies.model';
 
 export interface ResponseModel {
   Search: MoviesModel[];
