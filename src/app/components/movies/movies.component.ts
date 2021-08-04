@@ -4,7 +4,6 @@ import { Store, select } from '@ngrx/store';
 import { searchMovies } from '../../store/actions/movies.actions';
 import { AppState } from '../../store';
 import { getQueryParamSelector, selectMovies } from '../../store/selectors/movies.selectors';
-import {map} from "rxjs/operators";
 
 @Component({
   selector: 'app-movies',
